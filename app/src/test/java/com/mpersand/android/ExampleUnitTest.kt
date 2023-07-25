@@ -1,4 +1,4 @@
-package com.mpersand.gus
+package com.mpersand.android
 
 import org.junit.Test
 
