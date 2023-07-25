@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = 'GUS'
-include ':app'
+rootProject.name = "GUS"
+include(":app")
