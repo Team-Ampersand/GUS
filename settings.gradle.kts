@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GUS"
 include(":app")
+include(":GYMI-components")
