@@ -27,6 +27,12 @@ android {
     kotlinOptions {
         jvmTarget = ProjectProperties.Versions.JVM_TARGET
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
+    }
 }
 
 dependencies {
@@ -34,6 +40,9 @@ dependencies {
     implementation(Dependencies.AndroidX.CORE_KTX)
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.Google.MATERIAL)
+    implementation(Dependencies.Compose.FOUNDATION)
+    implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
+    debugImplementation(Dependencies.Compose.UI_TOOLING)
     testImplementation(Dependencies.Test.JUNIT)
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependencies.Test.ESPRESSO)
