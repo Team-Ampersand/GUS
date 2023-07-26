@@ -4,6 +4,12 @@ class Dependencies {
         const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
     }
 
+    object Compose {
+        const val FOUNDATION = "androidx.compose.foundation:foundation:${Versions.COMPOSE}"
+        const val UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
+        const val UI_TOOLING = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
+    }
+
     object Google {
         const val MATERIAL = "com.google.android.material:material:${Versions.GOOGLE_MATERIAL}"
     }
