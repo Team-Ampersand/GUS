@@ -30,5 +30,6 @@ object ProjectProperties {
 
     object NameSpace {
         const val APP = "com.mpersand.gus"
+        const val GYMI_COMPONENTS = "com.mpersand.gymi_components"
     }
 }

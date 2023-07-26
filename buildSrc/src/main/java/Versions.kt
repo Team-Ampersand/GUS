@@ -3,6 +3,9 @@ object Versions {
     const val KOTLIN = "1.8.20"
     const val KTLINT = "11.3.2"
 
+    const val COMPOSE_COMPILER = "1.4.6"
+    const val COMPOSE = "1.4.3"
+
     const val CORE_KTX = "1.10.1"
     const val APPCOMPAT = "1.6.1"
     const val GOOGLE_MATERIAL = "1.9.0"
