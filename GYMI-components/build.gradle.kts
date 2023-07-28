@@ -36,13 +36,13 @@ android {
 }
 
 dependencies {
-
     implementation(Dependencies.AndroidX.CORE_KTX)
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.Google.MATERIAL)
     implementation(Dependencies.Compose.FOUNDATION)
     implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
     debugImplementation(Dependencies.Compose.UI_TOOLING)
+    implementation(Dependencies.Compose.MATERIAL)
     testImplementation(Dependencies.Test.JUNIT)
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependencies.Test.ESPRESSO)
