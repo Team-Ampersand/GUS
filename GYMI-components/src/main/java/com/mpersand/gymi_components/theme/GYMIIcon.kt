@@ -8,7 +8,7 @@ import androidx.compose.material.Icon
 import com.mpersand.gymi_components.R
 
 @Composable
-fun Ic_BackArrow(
+fun IcBackArrow(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -21,7 +21,7 @@ fun Ic_BackArrow(
 }
 
 @Composable
-fun Ic_Badminton(
+fun IcBadminton(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -34,7 +34,7 @@ fun Ic_Badminton(
 }
 
 @Composable
-fun Ic_BasketBall(
+fun IcBasketBall(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -47,7 +47,7 @@ fun Ic_BasketBall(
 }
 
 @Composable
-fun Ic_Bell(
+fun IcBell(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -60,7 +60,7 @@ fun Ic_Bell(
 }
 
 @Composable
-fun Ic_CheckBox(
+fun IcCheckBox(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -73,7 +73,7 @@ fun Ic_CheckBox(
 }
 
 @Composable
-fun Ic_Delete(
+fun IcDelete(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -86,7 +86,7 @@ fun Ic_Delete(
 }
 
 @Composable
-fun Ic_Equipment(
+fun IcEquipment(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -99,7 +99,7 @@ fun Ic_Equipment(
 }
 
 @Composable
-fun Ic_Filter(
+fun IcFilter(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -112,7 +112,7 @@ fun Ic_Filter(
 }
 
 @Composable
-fun Ic_GYMILogo(
+fun IcGYMILogo(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -125,7 +125,7 @@ fun Ic_GYMILogo(
 }
 
 @Composable
-fun Ic_Home(
+fun IcHome(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -138,7 +138,7 @@ fun Ic_Home(
 }
 
 @Composable
-fun Ic_Edit(
+fun IcEdit(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -151,7 +151,7 @@ fun Ic_Edit(
 }
 
 @Composable
-fun Ic_Notice(
+fun IcNotice(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -164,7 +164,7 @@ fun Ic_Notice(
 }
 
 @Composable
-fun Ic_lus(
+fun IcPlus(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -177,7 +177,7 @@ fun Ic_lus(
 }
 
 @Composable
-fun Ic_Profile(
+fun IcProfile(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -190,7 +190,7 @@ fun Ic_Profile(
 }
 
 @Composable
-fun Ic_Reservation(
+fun IcReservation(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -203,7 +203,7 @@ fun Ic_Reservation(
 }
 
 @Composable
-fun Ic_Volleyball(
+fun IcVolleyball(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
@@ -216,7 +216,7 @@ fun Ic_Volleyball(
 }
 
 @Composable
-fun Ic_XMark(
+fun IcXMark(
     modifier: Modifier = Modifier,
     tint: Color = Color.Unspecified
 ) {
