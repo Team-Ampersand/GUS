@@ -40,9 +40,9 @@ val Black = Color(0xFF000000)
 val White = Color(0xFFFFFFFF)
 
 class GYMIColor(
-    p1: Color,
-    p2: Color,
-    p3: Color,
+    p1: Color = P1,
+    p2: Color = P2,
+    p3: Color = P3,
     n1: Color,
     n2: Color,
     n3: Color,
@@ -51,8 +51,8 @@ class GYMIColor(
     n6: Color,
     bg: Color,
     md: Color,
-    error: Color,
-    positive: Color
+    error: Color = Error,
+    positive: Color = Positive
 ) {
     var p1 by mutableStateOf(p1)
         private set
