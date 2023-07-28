@@ -14,26 +14,27 @@ enum class Theme {
     DARK
 }
 
+
 private val GYMILightColors = GYMIColor(
-    n1 = Color(0xFF292E3D),
-    n2 = Color(0xFF656B80),
-    n3 = Color(0xFFBBBBCC),
-    n4 = Color(0xFFE2E2EE),
-    n5 = Color(0xFFF2F2F4),
-    n6 = Color(0xFFFDFDFD),
-    bg = Color(0xFFFAFAFA),
-    md = Color(0xFFFFFFFF)
+    n1 = LightN1,
+    n2 = LightN2,
+    n3 = LightN3,
+    n4 = LightN4,
+    n5 = LightN5,
+    n6 = LightN6,
+    bg = LightBG,
+    md = LightMD
 )
 
 private val GYMIDarkColors = GYMIColor(
-    n1 = Color(0xFFFDFDFD),
-    n2 = Color(0xFFF2F2F4),
-    n3 = Color(0xFFE2E2EE),
-    n4 = Color(0xFFBBBBCC),
-    n5 = Color(0xFF656B80),
-    n6 = Color(0xFF292E3D),
-    bg = Color(0xFF171E32),
-    md = Color(0xFF4A4A50)
+    n1 = DarkN1,
+    n2 = DarkN2,
+    n3 = DarkN3,
+    n4 = DarkN4,
+    n5 = DarkN5,
+    n6 = DarkN6,
+    bg = DarkBG,
+    md = DarkMD
 )
 
 private val LocalColorProvider = staticCompositionLocalOf { GYMILightColors }
