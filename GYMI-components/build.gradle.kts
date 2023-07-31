@@ -42,6 +42,7 @@ dependencies {
     implementation(Dependencies.Google.MATERIAL)
     implementation(Dependencies.Compose.FOUNDATION)
     implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
+    implementation(Dependencies.Compose.METIREAL)
     debugImplementation(Dependencies.Compose.UI_TOOLING)
     testImplementation(Dependencies.Test.JUNIT)
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
