@@ -41,7 +41,7 @@ dependencies {
     implementation(Dependencies.Google.MATERIAL)
     implementation(Dependencies.Compose.FOUNDATION)
     implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
-    implementation(Dependencies.Compose.METIREAL)
+    implementation(Dependencies.Compose.MATERIAL)
     debugImplementation(Dependencies.Compose.UI_TOOLING)
     implementation(Dependencies.Compose.MATERIAL)
     testImplementation(Dependencies.Test.JUNIT)
