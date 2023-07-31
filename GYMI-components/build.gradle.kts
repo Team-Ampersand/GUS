@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(Dependencies.AndroidX.CORE_KTX)
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.Google.MATERIAL)
@@ -44,6 +43,7 @@ dependencies {
     implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
     implementation(Dependencies.Compose.METIREAL)
     debugImplementation(Dependencies.Compose.UI_TOOLING)
+    implementation(Dependencies.Compose.MATERIAL)
     testImplementation(Dependencies.Test.JUNIT)
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependencies.Test.ESPRESSO)
