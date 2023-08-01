@@ -15,15 +15,15 @@ import com.mpersand.gymi_components.theme.GYMITheme
 fun GYMIButton(
     modifier: Modifier = Modifier,
     text: String,
-    colors: Color = GYMITheme.colors.p1,
+    backgroundColor: Color = GYMITheme.colors.p1,
     style: TextStyle = GYMITheme.typography.subtitle3,
     onClick: () -> Unit
 ) {
     Button(
-        onClick = onClick,
         modifier = modifier,
+        onClick = onClick,
         colors = ButtonDefaults.buttonColors(
-            backgroundColor = colors,
+            backgroundColor = backgroundColor,
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(8.dp)
