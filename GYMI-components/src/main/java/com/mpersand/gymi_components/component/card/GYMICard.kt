@@ -22,9 +22,7 @@ fun GYMICard(
     text: String
 ) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Column(
-            modifier = Modifier.size(150.dp),
-        ) {
+        Column(modifier = Modifier.size(150.dp),) {
             Image(
                 modifier = Modifier.fillMaxSize(),
                 painter = rememberAsyncImagePainter(
