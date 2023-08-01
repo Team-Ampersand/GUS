@@ -45,6 +45,13 @@ object GYMITypography {
     )
 
     @Stable
+    val h5 = TextStyle(
+        fontFamily = scdFont,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold
+    )
+
+    @Stable
     val body1 = TextStyle(
         fontFamily = scdFont,
         fontSize = 16.sp,
@@ -90,6 +97,13 @@ object GYMITypography {
     val subtitle3 = TextStyle(
         fontFamily = scdFont,
         fontSize = 16.sp,
+        fontWeight = FontWeight.Medium
+    )
+
+    @Stable
+    val subtitle4 = TextStyle(
+        fontFamily = scdFont,
+        fontSize = 12.sp,
         fontWeight = FontWeight.Medium
     )
 }
