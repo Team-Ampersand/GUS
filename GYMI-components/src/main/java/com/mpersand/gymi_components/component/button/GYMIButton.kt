@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.mpersand.gymi_components.theme.GYMITheme
+import com.mpersand.gymi_components.theme.White
 
 @Composable
 fun GYMIButton(
@@ -24,7 +25,7 @@ fun GYMIButton(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
             backgroundColor = backgroundColor,
-            contentColor = Color.White
+            contentColor = White
         ),
         shape = RoundedCornerShape(8.dp)
     ) {
