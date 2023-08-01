@@ -9,6 +9,7 @@ class Dependencies {
         const val UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
         const val UI_TOOLING = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
         const val MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
+        const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
     }
 
     object Google {

@@ -47,4 +47,5 @@ dependencies {
     testImplementation(Dependencies.Test.JUNIT)
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependencies.Test.ESPRESSO)
+    implementation(Dependencies.Compose.COIL)
 }
