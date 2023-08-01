@@ -6,6 +6,7 @@ object Versions {
     const val COMPOSE_COMPILER = "1.4.6"
     const val COMPOSE = "1.4.3"
     const val COMPOSE_MATERIAL = "1.3.1"
+    const val COIL = "2.4.0"
 
     const val CORE_KTX = "1.10.1"
     const val APPCOMPAT = "1.6.1"
