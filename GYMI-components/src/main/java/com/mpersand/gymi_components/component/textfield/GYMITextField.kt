@@ -3,13 +3,10 @@ package com.mpersand.gymi_components.component.textfield
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.Text
@@ -27,12 +24,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.mpersand.gymi_components.theme.Black
 import com.mpersand.gymi_components.theme.GYMITheme
-import com.mpersand.gymi_components.theme.White
 
 @Composable
 fun GYMITextField(
@@ -100,41 +94,6 @@ fun GYMITextField(
                     innerTextField()
                 }
             }
-        )
-    }
-}
-
-@Preview
-@Composable
-fun preview() {
-    var testText1 by remember { mutableStateOf("") }
-    var testText2 by remember { mutableStateOf("") }
-
-    Column {
-        Spacer(modifier = Modifier.height(20.dp))
-
-        GYMITextField(
-            height = 50.dp,
-            background = GYMITheme.colors.n2,
-            value = testText1,
-            onValueChange = { testText1 = it },
-            textColor = White,
-            focusColor = GYMITheme.colors.p1,
-            placeholder = "빈 값입니다.",
-            placeholderColor = GYMITheme.colors.n4
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        GYMITextField(
-            height = 50.dp,
-            background = GYMITheme.colors.n4,
-            value = testText2,
-            onValueChange = { testText2 = it },
-            textColor = Black,
-            focusColor = GYMITheme.colors.p3,
-            placeholder = "빈 값입니다.",
-            placeholderColor = GYMITheme.colors.n2
         )
     }
 }
