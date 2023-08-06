@@ -3,7 +3,9 @@ package com.mpersand.gymi_components.component.textfield
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -24,9 +26,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.mpersand.gymi_components.theme.Black
 import com.mpersand.gymi_components.theme.GYMITheme
+import com.mpersand.gymi_components.theme.White
 
 @Composable
 fun GYMITextField(
@@ -78,14 +83,12 @@ fun GYMITextField(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 15.dp)
                 ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        if (value.isEmpty()) {
-                            Text(
-                                text = placeholder,
-                                style = GYMITheme.typography.body3,
-                                color = placeholderColor,
-                            )
-                        }
+                    if (value.isEmpty()) {
+                        Text(
+                            text = placeholder,
+                            style = GYMITheme.typography.body3,
+                            color = placeholderColor,
+                        )
                     }
                     innerTextField()
                 }
