@@ -31,7 +31,6 @@ import com.mpersand.gymi_components.theme.GYMITheme
 @Composable
 fun GYMITextField(
     modifier: Modifier = Modifier,
-    height: Dp,
     background: Color,
     value: String,
     textColor: Color,
@@ -48,7 +47,6 @@ fun GYMITextField(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(height)
             .padding(horizontal = 20.dp)
             .background(
                 color = background,
