@@ -84,9 +84,7 @@ fun GYMITextField(
                         if (value.isEmpty()) {
                             Text(
                                 text = placeholder,
-                                fontSize = GYMITheme.typography.body3.fontSize,
-                                fontWeight = GYMITheme.typography.body3.fontWeight,
-                                fontFamily = GYMITheme.typography.body3.fontFamily,
+                                style = GYMITheme.typography.body3,
                                 color = placeholderColor,
                             )
                         }
