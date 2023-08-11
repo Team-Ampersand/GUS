@@ -48,3 +48,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("io.coil-kt:coil-compose:2.4.0")
 }
+
+group = "com.github.gus"
