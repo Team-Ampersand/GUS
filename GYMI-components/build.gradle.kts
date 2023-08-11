@@ -49,3 +49,5 @@ dependencies {
     androidTestImplementation(Dependencies.Test.ESPRESSO)
     implementation(Dependencies.Compose.COIL)
 }
+
+group = "com.github.gus"
