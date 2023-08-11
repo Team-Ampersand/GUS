@@ -1,7 +1,8 @@
 plugins {
     id(ProjectProperties.Gradle.LIBRARY)
     id(ProjectProperties.Gradle.KOTLIN)
-    id(ProjectProperties.Gradle.JITPACK)
+//    id(ProjectProperties.Gradle.JITPACK)
+//    id(ProjectProperties.Gradle.JITPACK_GRADLE)
 }
 
 android {
@@ -51,17 +52,17 @@ dependencies {
     implementation(Dependencies.Compose.COIL)
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                groupId = "com.github.Team-Ampersand"
-                artifactId = "GUS"
-                version = "1.0.0"
-                from(components["release"])
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            create<MavenPublication>("release") {
+//                groupId = "com.github.Team-Ampersand"
+//                artifactId = "GUS"
+//                version = "1.0.0"
+//                from(components["release"])
+//            }
+//        }
+//    }
+//}
 
-group = "com.github.gus"
+//group = "com.github.Team-Ampersand"
