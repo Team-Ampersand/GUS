@@ -1,6 +1,7 @@
 plugins {
     id(ProjectProperties.Gradle.LIBRARY)
     id(ProjectProperties.Gradle.KOTLIN)
+    id(ProjectProperties.Gradle.JITPACK)
 }
 
 android {
@@ -48,6 +49,19 @@ dependencies {
     androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependencies.Test.ESPRESSO)
     implementation(Dependencies.Compose.COIL)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.Team-Ampersand"
+                artifactId = "GUS"
+                version = "1.0.0"
+                from(components["release"])
+            }
+        }
+    }
 }
 
 group = "com.github.gus"

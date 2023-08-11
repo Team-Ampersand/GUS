@@ -6,6 +6,7 @@ object ProjectProperties {
         const val LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
         const val KTLINT = "org.jlleitschuh.gradle.ktlint"
+        const val JITPACK = "maven-publish"
     }
 
     object Test {
