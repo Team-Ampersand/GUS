@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation(project(mapOf("path" to ":GYMI-components")))
 
     implementation(Dependencies.AndroidX.CORE_KTX)
     implementation(Dependencies.AndroidX.APPCOMPAT)

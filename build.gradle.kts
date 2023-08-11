@@ -1,3 +1,8 @@
+buildscript {
+    dependencies {
+        classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
+    }
+}
 plugins {
     id(ProjectProperties.Gradle.APPLICATION) version Versions.GRADLE apply false
     id(ProjectProperties.Gradle.LIBRARY) version Versions.GRADLE apply false
