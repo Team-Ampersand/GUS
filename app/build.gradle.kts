@@ -1,44 +1,44 @@
 plugins {
-    id(ProjectProperties.Gradle.APPLICATION)
-    id(ProjectProperties.Gradle.KOTLIN)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = ProjectProperties.NameSpace.APP
-    compileSdk = ProjectProperties.Versions.COMPILE_SDK
+    namespace = "com.mpersand.gus"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = ProjectProperties.NameSpace.APP
-        minSdk = ProjectProperties.Versions.MIN_SDK
-        targetSdk = ProjectProperties.Versions.TARGET_SDK
-        versionCode = ProjectProperties.Versions.VERSION_CODE
-        versionName = ProjectProperties.Versions.VERSION_NAME
+        applicationId = "com.mpersand.gus"
+        minSdk = 24
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
 
-        testInstrumentationRunner = ProjectProperties.Test.TEST_RUNNER
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile(ProjectProperties.Files.DEFAULT_PROGUARD), ProjectProperties.Files.PROGUARD)
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
-        sourceCompatibility = ProjectProperties.Versions.JAVA_VERSION
-        targetCompatibility = ProjectProperties.Versions.JAVA_VERSION
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = ProjectProperties.Versions.JVM_TARGET
+        jvmTarget = "11"
     }
 }
 
 dependencies {
     implementation(project(mapOf("path" to ":GYMI-components")))
 
-    implementation(Dependencies.AndroidX.CORE_KTX)
-    implementation(Dependencies.AndroidX.APPCOMPAT)
-    implementation(Dependencies.Google.MATERIAL)
-    testImplementation(Dependencies.Test.JUNIT)
-    androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
-    androidTestImplementation(Dependencies.Test.ESPRESSO)
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

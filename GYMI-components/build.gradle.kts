@@ -1,68 +1,66 @@
 plugins {
-    id(ProjectProperties.Gradle.LIBRARY)
-    id(ProjectProperties.Gradle.KOTLIN)
-//    id(ProjectProperties.Gradle.JITPACK)
-//    id(ProjectProperties.Gradle.JITPACK_GRADLE)
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
-    namespace = ProjectProperties.NameSpace.GYMI_COMPONENTS
-    compileSdk = ProjectProperties.Versions.COMPILE_SDK
+    namespace = "com.mpersand.gymi_components"
+    compileSdk = 33
 
     defaultConfig {
-        minSdk = ProjectProperties.Versions.MIN_SDK
+        minSdk = 24
 
-        testInstrumentationRunner = ProjectProperties.Test.TEST_RUNNER
-        consumerProguardFiles(ProjectProperties.Files.CONSUMER_PROGUARD)
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile(ProjectProperties.Files.DEFAULT_PROGUARD), ProjectProperties.Files.PROGUARD)
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
-        sourceCompatibility = ProjectProperties.Versions.JAVA_VERSION
-        targetCompatibility = ProjectProperties.Versions.JAVA_VERSION
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = ProjectProperties.Versions.JVM_TARGET
+        jvmTarget = "11"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
+        kotlinCompilerExtensionVersion = "1.4.6"
     }
 }
 
 dependencies {
-    implementation(Dependencies.AndroidX.CORE_KTX)
-    implementation(Dependencies.AndroidX.APPCOMPAT)
-    implementation(Dependencies.Google.MATERIAL)
-    implementation(Dependencies.Compose.FOUNDATION)
-    implementation(Dependencies.Compose.UI_TOOLING_PREVIEW)
-    implementation(Dependencies.Compose.MATERIAL)
-    debugImplementation(Dependencies.Compose.UI_TOOLING)
-    implementation(Dependencies.Compose.MATERIAL)
-    testImplementation(Dependencies.Test.JUNIT)
-    androidTestImplementation(Dependencies.Test.ANDROID_JUNIT)
-    androidTestImplementation(Dependencies.Test.ESPRESSO)
-    implementation(Dependencies.Compose.COIL)
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.compose.foundation:foundation:1.4.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+    implementation("androidx.compose.material:material:1.4.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            create<MavenPublication>("release") {
-//                groupId = "com.github.Team-Ampersand"
-//                artifactId = "GUS"
-//                version = "1.0.0"
-//                from(components["release"])
-//            }
-//        }
-//    }
-//}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.gus"
+                artifactId = "GUS"
+                version = "1.0.5"
+                from(components["release"])
+            }
+        }
+    }
+}
 
-//group = "com.github.Team-Ampersand"
+group = "com.github.gus"
