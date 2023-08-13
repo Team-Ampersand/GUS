@@ -19,11 +19,12 @@ import com.mpersand.gymi_components.theme.GYMITheme
 import com.mpersand.gymi_components.theme.IcBell
 import com.mpersand.gymi_components.theme.IcGYMILogo
 import com.mpersand.gymi_components.theme.IcProfile
+import com.mpersand.gymi_components.utils.GYMIDimen.GYMIHeaderHeight
 
 @Composable
 fun GYMIHeader(
     modifier: Modifier = Modifier,
-    background: Color = GYMITheme.colors.n2,
+    background: Color = GYMITheme.colors.hd,
     navigateToMain: () -> Unit,
     navigateToNotice: () -> Unit,
     navigationToProfile: () -> Unit
@@ -31,7 +32,7 @@ fun GYMIHeader(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(50.dp)
+            .height(GYMIHeaderHeight)
             .background(background)
             .padding(horizontal = 20.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -55,7 +56,6 @@ fun GYMIHeaderPreview() {
         )
         Spacer(modifier = Modifier.height(30.dp))
         GYMIHeader(
-            background = GYMITheme.colors.n3,
             navigateToMain = {},
             navigateToNotice = {},
             navigationToProfile = {}
