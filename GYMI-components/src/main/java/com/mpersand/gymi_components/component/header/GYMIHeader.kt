@@ -23,7 +23,7 @@ import com.mpersand.gymi_components.theme.IcProfile
 @Composable
 fun GYMIHeader(
     modifier: Modifier = Modifier,
-    background: Color,
+    background: Color = GYMITheme.colors.n2,
     navigateToMain: () -> Unit,
     navigateToNotice: () -> Unit,
     navigationToProfile: () -> Unit
