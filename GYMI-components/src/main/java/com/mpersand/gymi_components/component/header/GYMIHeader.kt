@@ -2,7 +2,6 @@ package com.mpersand.gymi_components.component.header
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mpersand.gymi_components.theme.GYMITheme
 import com.mpersand.gymi_components.theme.IcBell
@@ -42,23 +40,5 @@ fun GYMIHeader(
         IcBell(modifier = Modifier.clickable { navigateToNotice() })
         Spacer(modifier = modifier.width(30.dp))
         IcProfile(modifier = Modifier.clickable { navigationToProfile() })
-    }
-}
-
-@Preview
-@Composable
-fun GYMIHeaderPreview() {
-    Column {
-        GYMIHeader(
-            navigateToMain = {},
-            navigateToNotice = {},
-            navigationToProfile = {}
-        )
-        Spacer(modifier = Modifier.height(30.dp))
-        GYMIHeader(
-            navigateToMain = {},
-            navigateToNotice = {},
-            navigationToProfile = {}
-        )
     }
 }
