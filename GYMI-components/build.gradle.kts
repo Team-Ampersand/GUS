@@ -56,7 +56,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.gus"
                 artifactId = "GUS"
-                version = "1.0.5"
+                version = "1.1.0"
                 from(components["release"])
             }
         }
