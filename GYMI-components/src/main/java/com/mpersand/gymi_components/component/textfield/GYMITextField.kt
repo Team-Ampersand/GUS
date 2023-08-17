@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.mpersand.gymi_components.theme.GYMITheme
 
@@ -35,6 +36,8 @@ fun GYMITextField(
     focusColor: Color,
     placeholder: String,
     placeholderColor: Color,
+    horizontalPadding: Dp,
+    border: Color = GYMITheme.colors.bg,
     onValueChange: (String) -> Unit
 ) {
     val focusRequester by remember { mutableStateOf(FocusRequester()) }
@@ -43,14 +46,14 @@ fun GYMITextField(
     BasicTextField(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp)
+            .padding(horizontal = horizontalPadding)
             .background(
                 color = background,
                 shape = RoundedCornerShape(8.dp)
             )
             .border(
                 width = 1.dp,
-                color = if (isFocus) focusColor else background,
+                color = if (isFocus) focusColor else border,
                 shape = RoundedCornerShape(8.dp)
             )
             .focusRequester(focusRequester)
