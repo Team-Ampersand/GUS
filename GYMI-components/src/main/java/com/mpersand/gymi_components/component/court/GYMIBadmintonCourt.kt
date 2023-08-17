@@ -31,7 +31,7 @@ fun GYMIBadmintonCourt(
         },
         painter = painterResource(id = R.drawable.ic_badminton_court),
         contentDescription = "badminton_court",
-        contentScale = ContentScale.Crop,
+        contentScale = ContentScale.FillBounds,
         colorFilter = ColorFilter.tint(
             color = when {
                 isClicked && !isReserved -> GYMITheme.colors.positive

@@ -30,7 +30,7 @@ fun GYMIBasketballCourt(
             onClick()
         },
         painter = painterResource(id = R.drawable.ic_basketball_court),
-        contentScale = ContentScale.Crop,
+        contentScale = ContentScale.FillBounds,
         contentDescription = "basketball_court",
         colorFilter = ColorFilter.tint(
             color = when {
