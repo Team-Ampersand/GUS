@@ -10,13 +10,13 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.mpersand.gymi_components.theme.White
+import com.mpersand.gymi_components.theme.GYMITheme
 import com.mpersand.gymi_components.utils.GYMIDimen.NavBarHeight
 
 @Composable
 fun GYMINavBar(
     modifier: Modifier = Modifier,
-    backgroundColor: Color = White,
+    backgroundColor: Color = GYMITheme.colors.bg,
     content: @Composable RowScope.() -> Unit
 ) {
     Surface(color = backgroundColor) {
