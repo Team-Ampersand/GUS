@@ -37,6 +37,7 @@ fun GYMITextField(
     placeholder: String,
     placeholderColor: Color,
     horizontalPadding: Dp,
+    border: Color = GYMITheme.colors.bg,
     onValueChange: (String) -> Unit
 ) {
     val focusRequester by remember { mutableStateOf(FocusRequester()) }
@@ -52,7 +53,7 @@ fun GYMITextField(
             )
             .border(
                 width = 1.dp,
-                color = if (isFocus) focusColor else background,
+                color = if (isFocus) focusColor else border,
                 shape = RoundedCornerShape(8.dp)
             )
             .focusRequester(focusRequester)
