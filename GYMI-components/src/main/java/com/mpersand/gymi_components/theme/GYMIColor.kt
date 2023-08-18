@@ -35,6 +35,9 @@ val S1 = Color(0xFFB84040)
 val S2 = Color(0xFF2FAD52)
 val S3 = Color(0xFFEEF5FD)
 
+val LightBW = Color(0xFF000000)
+val DarkBW = Color(0xFFFFFFFF)
+
 val Error = Color(0xFFFF5D5D)
 val Positive = Color(0xFF49FF7C)
 
@@ -54,6 +57,7 @@ class GYMIColor(
     bg: Color,
     md: Color,
     hd: Color,
+    bw: Color,
     error: Color = Error,
     positive: Color = Positive
 ) {
@@ -93,6 +97,9 @@ class GYMIColor(
     var hd by mutableStateOf(hd)
         private set
 
+    var bw by mutableStateOf(bw)
+        private set
+
     var error by mutableStateOf(error)
         private set
 
@@ -112,6 +119,7 @@ class GYMIColor(
         this.bg = gymiColor.bg
         this.md = gymiColor.md
         this.hd = gymiColor.hd
+        this.bw = gymiColor.bw
         this.error = gymiColor.error
         this.positive = gymiColor.positive
     }
@@ -129,6 +137,7 @@ class GYMIColor(
         bg = bg,
         md = md,
         hd = hd,
+        bw = bw,
         error = error,
         positive = positive
     )

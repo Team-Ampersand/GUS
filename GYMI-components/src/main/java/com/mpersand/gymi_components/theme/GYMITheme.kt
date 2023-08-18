@@ -23,7 +23,8 @@ private val GYMILightColors = GYMIColor(
     n6 = LightN6,
     bg = LightBG,
     md = LightMD,
-    hd = LightHD
+    hd = LightHD,
+    bw = LightBW
 )
 
 private val GYMIDarkColors = GYMIColor(
@@ -35,7 +36,8 @@ private val GYMIDarkColors = GYMIColor(
     n6 = DarkN6,
     bg = DarkBG,
     md = DarkMD,
-    hd = DarkHD
+    hd = DarkHD,
+    bw = DarkBW
 )
 
 private val LocalColorProvider = staticCompositionLocalOf { GYMILightColors }
