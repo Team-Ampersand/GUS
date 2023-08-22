@@ -26,9 +26,9 @@ fun GYMIBadmintonCourt(
 
     Image(
         modifier = modifier.clickable {
-            isClicked = !isClicked
-            onClick()
-        },
+                isClicked = !isClicked
+                onClick()
+            },
         painter = painterResource(id = R.drawable.ic_badminton_court),
         contentDescription = "badminton_court",
         contentScale = ContentScale.FillBounds,
