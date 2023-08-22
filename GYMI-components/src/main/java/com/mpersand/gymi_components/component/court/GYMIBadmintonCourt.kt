@@ -25,8 +25,7 @@ fun GYMIBadmintonCourt(
     var isClicked by remember { mutableStateOf(false) }
 
     Image(
-        modifier = modifier
-            .clickable {
+        modifier = modifier.clickable {
                 isClicked = !isClicked
                 onClick()
             },
