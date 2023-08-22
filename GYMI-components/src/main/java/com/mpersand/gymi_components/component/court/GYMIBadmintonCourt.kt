@@ -22,8 +22,7 @@ import com.mpersand.gymi_components.theme.White
 fun GYMIBadmintonCourt(
     modifier: Modifier = Modifier,
     isReserved: Int,
-    onUpperClick: () -> Unit,
-    onLowerClick: () -> Unit
+    onClick: () -> Unit
 ) {
     var isClicked by remember { mutableStateOf(-1) }
 
@@ -33,7 +32,7 @@ fun GYMIBadmintonCourt(
                 modifier = Modifier
                     .clickable {
                         isClicked = if (isClicked == it) -1 else it
-                        if (it % 2 != 0) onLowerClick() else onUpperClick()
+                        onClick()
                     }
                     .graphicsLayer {
                         if (it % 2 != 0) rotationX = 180f
