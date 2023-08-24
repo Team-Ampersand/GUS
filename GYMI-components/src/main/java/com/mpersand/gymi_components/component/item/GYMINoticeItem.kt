@@ -35,18 +35,21 @@ fun GYMINoticeItem(
             Row {
                 Text(
                     text = title,
-                    style = GYMITheme.typography.h5
+                    style = GYMITheme.typography.h5,
+                    color = GYMITheme.colors.bw
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = date,
-                    style = GYMITheme.typography.body3
+                    style = GYMITheme.typography.body3,
+                    color = GYMITheme.colors.bw
                 )
             }
             Spacer(modifier = Modifier.height(14.dp))
             Text(
                 text = content,
-                style = GYMITheme.typography.subtitle4
+                style = GYMITheme.typography.subtitle4,
+                color = GYMITheme.colors.bw
             )
         }
     }
