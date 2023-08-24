@@ -1,5 +1,6 @@
 package com.mpersand.gymi_components.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
@@ -59,7 +60,7 @@ private fun GYMIThemeLocalProvider(
 }
 
 private val Theme.colors: GYMIColor
-    get() = when(this) {
+    get() = when (this) {
         Theme.DARK -> GYMIDarkColors
         Theme.LIGHT -> GYMILightColors
     }
@@ -86,6 +87,8 @@ fun GYMITheme(
     typography: GYMITypography = GYMITheme.typography,
     content: @Composable () -> Unit
 ) {
+    GYMITheme.gymiTheme = if (isSystemInDarkTheme()) Theme.DARK else Theme.LIGHT
+
     GYMIThemeLocalProvider(
         colors = gymiTheme.colors,
         typography = typography,
