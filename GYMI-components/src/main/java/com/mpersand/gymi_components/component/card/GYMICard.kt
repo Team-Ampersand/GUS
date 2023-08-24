@@ -35,7 +35,8 @@ fun GYMICard(
         Spacer(modifier = modifier.height(7.dp))
         Text(
             text = text,
-            style = GYMITheme.typography.body2
+            style = GYMITheme.typography.body2,
+            color = GYMITheme.colors.bw
         )
     }
 }
