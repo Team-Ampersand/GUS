@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -36,6 +37,8 @@ fun GYMITextField(
     placeholder: String,
     placeholderColor: Color = GYMITheme.colors.n2,
     border: Color = GYMITheme.colors.bg,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     onValueChange: (String) -> Unit
 ) {
     val focusRequester by remember { mutableStateOf(FocusRequester()) }
@@ -63,7 +66,8 @@ fun GYMITextField(
         cursorBrush = SolidColor(textColor),
         singleLine = singleLine,
         maxLines = maxLine,
-        visualTransformation = VisualTransformation.None,
+        visualTransformation = visualTransformation,
+        keyboardOptions = keyboardOptions,
         decorationBox = { innerTextField ->
             Box(
                 modifier = modifier
@@ -82,3 +86,4 @@ fun GYMITextField(
         }
     )
 }
+
