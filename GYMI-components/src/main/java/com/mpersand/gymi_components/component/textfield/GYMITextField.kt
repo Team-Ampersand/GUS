@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,23 +22,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.mpersand.gymi_components.theme.GYMITheme
 
 @Composable
 fun GYMITextField(
     modifier: Modifier = Modifier,
-    background: Color,
+    background: Color = GYMITheme.colors.n5,
     value: String,
-    textColor: Color,
+    textColor: Color = GYMITheme.colors.bw,
     singleLine: Boolean = true,
     maxLine: Int = 1,
-    focusColor: Color,
+    focusColor: Color = GYMITheme.colors.p3,
     placeholder: String,
-    placeholderColor: Color,
-    horizontalPadding: Dp,
+    placeholderColor: Color = GYMITheme.colors.n2,
     border: Color = GYMITheme.colors.bg,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     onValueChange: (String) -> Unit
 ) {
     val focusRequester by remember { mutableStateOf(FocusRequester()) }
@@ -46,7 +47,6 @@ fun GYMITextField(
     BasicTextField(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = horizontalPadding)
             .background(
                 color = background,
                 shape = RoundedCornerShape(8.dp)
@@ -66,7 +66,8 @@ fun GYMITextField(
         cursorBrush = SolidColor(textColor),
         singleLine = singleLine,
         maxLines = maxLine,
-        visualTransformation = VisualTransformation.None,
+        visualTransformation = visualTransformation,
+        keyboardOptions = keyboardOptions,
         decorationBox = { innerTextField ->
             Box(
                 modifier = modifier
@@ -85,3 +86,4 @@ fun GYMITextField(
         }
     )
 }
+
