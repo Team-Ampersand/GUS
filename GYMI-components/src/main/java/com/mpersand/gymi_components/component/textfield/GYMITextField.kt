@@ -44,7 +44,6 @@ fun GYMITextField(
     BasicTextField(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = horizontalPadding)
             .background(
                 color = background,
                 shape = RoundedCornerShape(8.dp)
