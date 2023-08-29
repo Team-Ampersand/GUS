@@ -21,22 +21,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.mpersand.gymi_components.theme.GYMITheme
 
 @Composable
 fun GYMITextField(
     modifier: Modifier = Modifier,
-    background: Color,
+    background: Color = GYMITheme.colors.n5,
     value: String,
-    textColor: Color,
+    textColor: Color = GYMITheme.colors.bw,
     singleLine: Boolean = true,
     maxLine: Int = 1,
-    focusColor: Color,
+    focusColor: Color = GYMITheme.colors.p3,
     placeholder: String,
-    placeholderColor: Color,
-    horizontalPadding: Dp,
+    placeholderColor: Color = GYMITheme.colors.n2,
     border: Color = GYMITheme.colors.bg,
     onValueChange: (String) -> Unit
 ) {
