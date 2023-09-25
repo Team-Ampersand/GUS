@@ -22,22 +22,15 @@ fun GYMIBadmintonCourt(
     isReserved: Boolean,
     onClick: () -> Unit
 ) {
-    var isClicked by remember { mutableStateOf(false) }
-
     Image(
         modifier = modifier.clickable {
-                isClicked = !isClicked
-                onClick()
-            },
+            onClick()
+        },
         painter = painterResource(id = R.drawable.ic_badminton_court),
         contentDescription = "badminton_court",
         contentScale = ContentScale.FillBounds,
         colorFilter = ColorFilter.tint(
-            color = when {
-                isClicked && !isReserved -> GYMITheme.colors.positive
-                isReserved -> GYMITheme.colors.error
-                else -> White
-            },
+            color = if (isReserved) GYMITheme.colors.error else White,
             blendMode = BlendMode.Darken
         )
     )
